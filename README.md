@@ -13,29 +13,29 @@ Pasos previos de servicios necesarios para la receta
 
 Instalar Vagrant
 
-apt-get install vagrant 
+- apt-get install vagrant 
 
 Instalar Ansible
 
-apt-get install ansible 
+- apt-get install ansible 
 
 Ejecutar la receta:
 
-ansible-playbook main.yml
+- ansible-playbook main.yml
 
 Pasos previos para poder ver el resultado 
 
 Necesitamos tener la configuración de red 192.168.100.X/24, añadimos el siguiente direccionamiento:
 
-ip a add 192.168.100.X/24 dev eth0
+- ip a add 192.168.100.X/24 dev eth0
 
 Modificamos el fichero /etc/resolv.conf y definimos la IP de nodo1:
 
-nano /etc/resolv.conf
+- nano /etc/resolv.conf
 
 nameserver 192.168.100.1
 
 Accedemos al navegador:
 
-www.iesgn.org
+- www.iesgn.org
 
