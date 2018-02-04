@@ -33,7 +33,7 @@ Modificamos el fichero /etc/resolv.conf y definimos la IP de nodo1:
 
 - nano /etc/resolv.conf
 
-nameserver 192.168.100.1
+- nameserver 192.168.100.1
 
 Accedemos al navegador:
 
