@@ -9,7 +9,7 @@ Configuración de nodo1 y nodo2 con ansible para instalar la aplicación wordpre
 - nodo1: MariaDB y Bind9
 - nodo2: Nginx con FPM
 
-Pasos previos de servicios necesarios para la receta
+Pasos previos necesarios para la receta
 
 Instalar Vagrant
 
