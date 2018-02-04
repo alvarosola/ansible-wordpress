@@ -12,8 +12,8 @@
       mysql_user:
         name: wordpress
         password: wordpress
-        priv: wordpress.*:ALL
-        host: %
+        priv: 'wordpress.*:ALL'
+        host: '%'
 
     - name: configuracion mariadb
       copy:
