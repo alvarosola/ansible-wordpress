@@ -33,7 +33,7 @@ Necesitamos tener la configuración de red 192.168.100.X/24, añadimos el siguie
 
 - ip a add 192.168.100.X/24 dev eth0
 
-Modificamos el fichero /etc/resolv.conf y definimos la IP de nodo1:
+Modificamos el fichero /etc/resolv.conf para definir la máquina nodo1 como DNS principal:
 
 - nano /etc/resolv.conf
 
