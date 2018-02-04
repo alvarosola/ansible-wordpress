@@ -1,0 +1,22 @@
+---
+- hosts: nodo2
+  become: yes
+  tasks:
+    - name: Instalar zip para descomprimir paquete
+      apt:
+           name: unzip
+           update_cache: yes
+
+    - name: Descomprimir wordpress
+      unarchive: 
+        src: templates/wordpress-4.9.2-es_ES.zip 
+        dest: /var/www/html  
+        owner: www-data
+        group: www-data
+
+    - name: configuracion fichero wordpress
+      template: 
+        src: templates/wp-config.php 
+        dest: /var/www/html/wordpress/
+        owner: www-data
+        group: www-data

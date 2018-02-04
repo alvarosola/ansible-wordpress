@@ -1,0 +1,36 @@
+---
+- hosts: nodo1
+  become: yes
+  tasks:
+    - name: Instalar mysqk
+      apt: name={{ item }} state=installed update_cache=yes
+      with_items:
+        - mariadb-server
+        - python-mysqldb 
+
+    - name: crear usuario
+      mysql_user:
+        name: wordpress
+        password: wordpress
+        priv: wordpress.*:ALL
+        host: %
+
+    - name: configuracion mariadb
+      copy:
+        src: 50-server.cnf
+        dest: /etc/mysql/mariadb.conf.d/50-server.cnf
+
+    - name: copiar fichero wordpress.sql
+      copy: 
+        src: templates/wordpress.sql 
+        dest: /tmp
+      
+    - name: importar bbdd wordpress
+      mysql_db: 
+        name: wordpress	
+        state: import 
+        target: /tmp/wordpress.sql
+
+  handlers:
+    - name: restart mysql
+      service: name=mysql state=restarted

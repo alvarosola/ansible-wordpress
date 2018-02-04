@@ -1,0 +1,14 @@
+---
+- hosts: nodo2
+  become: yes
+  tasks:
+    - name: Instalar php FPM  
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - php7.0
+        - php7.0-fpm
+        - php-mysql
+
+  handlers:
+  - name: reinicio php
+    service: name=php7.0-fpm state=restarted

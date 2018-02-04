@@ -1,0 +1,17 @@
+---
+- hosts: nodo2
+  become: yes
+  tasks:
+          - name: Instalar nginx
+            apt:
+                    name: nginx
+                    update_cache: yes
+
+          - name: configuracion nginx
+            template:
+                    src: templates/default
+		    dest: /etc/nginx/sites-available/default
+
+  handlers:
+          - name: reinicio nginx
+            service: name=nginx state=restarted
