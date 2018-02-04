@@ -19,6 +19,10 @@ Instalar Ansible
 
 - apt-get install ansible 
 
+Clonar repositorio git:
+
+- git clone https://github.com/alvarosola/ansible-wordpress
+
 Ejecutar la receta:
 
 - ansible-playbook main.yml
