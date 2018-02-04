@@ -10,7 +10,7 @@
           - name: configuracion nginx
             template:
                     src: templates/default
-		    dest: /etc/nginx/sites-available/default
+                    dest: /etc/nginx/sites-available/default
 
   handlers:
           - name: reinicio nginx

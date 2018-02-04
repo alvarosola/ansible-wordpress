@@ -6,15 +6,13 @@ server {
 
         index index.html index.htm  index.php;
 
-        server_name wordpress.example.com;
+        server_name www.iesgn.org;
 
         location / {
                 try_files $uri $uri/ =404;
         }
-
 	location ~ \.php$ {
                 include snippets/fastcgi-php.conf;
-
                 fastcgi_pass unix:/run/php/php7.0-fpm.sock;
 	}
 }
