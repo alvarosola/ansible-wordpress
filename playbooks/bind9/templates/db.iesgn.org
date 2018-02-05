@@ -13,7 +13,7 @@ $TTL 86400
 ;
 @	IN	NS	nodo1.iesgn.org.
 
-$ORIGIN	nodos.com.
-nodo1	IN	A	192.168.100.1
-nodo2	IN	A	192.168.100.2
+$ORIGIN	iesgn.org.
+nodo1	IN	A	192.168.69.69
+nodo2	IN	A	192.168.69.70
 www IN CNAME nodo2

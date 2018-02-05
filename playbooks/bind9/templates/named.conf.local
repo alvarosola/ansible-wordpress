@@ -3,7 +3,7 @@ type master;
 file "/var/cache/bind/db.iesgn.org";
 };
 
-zone "100.168.192.in-addr.arpa" {
+zone "69.168.192.in-addr.arpa" {
 type master;
-file "/var/cache/bind/db.100.168.192";
+file "/var/cache/bind/db.69.168.192";
 };
