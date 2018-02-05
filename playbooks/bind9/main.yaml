@@ -3,9 +3,7 @@
   become: yes
   tasks:
     - name: Instalar bind9
-      apt:
-        name: bind9
-        update_cache: yes
+      apt: name=bind9 update_cache=yes
 
     - name: Configuracion bind9 
       copy:
