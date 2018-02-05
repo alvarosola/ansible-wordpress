@@ -29,7 +29,7 @@ Levantar escenario:
 
 Pasos previos para poder ver el resultado 
 
-Necesitamos tener en nuestra configuración de red, una red 192.168.100.X/24, para que la IP este dentro del mismo rango que las IPS externas de los nodos:
+Necesitamos tener en nuestra configuración de red, una red 192.168.69.X/24, para que la IP este dentro del mismo rango que las IPS externas de los nodos:
 
 - ip a add 192.168.69.X/24 dev eth0
 
