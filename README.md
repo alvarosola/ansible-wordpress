@@ -41,5 +41,5 @@ Modificamos el fichero /etc/resolv.conf para definir la máquina nodo1 como DNS 
 
 Accedemos al navegador:
 
-- www.iesgn.org
+- www.iesgn.org.
 
