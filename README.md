@@ -9,7 +9,7 @@ Configuración de nodo1 y nodo2 con ansible para instalar la aplicación wordpre
 - nodo1: MariaDB y Bind9
 - nodo2: Nginx con FPM
 
-Servicios necesarios
+Servicios necesarios:
 
 Instalar Vagrant
 
@@ -29,7 +29,7 @@ Levantar escenario:
 
 Pasos previos para poder ver el resultado 
 
-EXECEPCIÓN: En el caso que automaticamente vagrant no levante una interfaz de red en su sistema, necesitamos tener en nuestra configuración de red, una red 192.168.69.X/24, para que la IP este dentro del mismo rango que las IPS externas de los nodos:
+Exepción: En el caso que automaticamente vagrant no levante una interfaz de red en su sistema, necesitamos tener en nuestra configuración de red, una red 192.168.69.X/24, para que la IP este dentro del mismo rango que las IPS externas de los nodos:
 
 - ip a add 192.168.69.X/24 dev eth0
 
