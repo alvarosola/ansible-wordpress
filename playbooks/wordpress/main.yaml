@@ -20,3 +20,11 @@
         dest: /var/www/html/wordpress/wp-config.php
         owner: www-data
         group: www-data
+          
+    - name: reiniciar nginx
+      service: name=nginx state=restarted
+      become: yes
+
+    - name: reiniciar php
+      service: name=php7.0-fpm state=restarted
+      become: yes
