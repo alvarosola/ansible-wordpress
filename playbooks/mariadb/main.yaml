@@ -12,7 +12,7 @@
       mysql_user:
         name: wordpress
         password: wordpress
-        priv: 'wordpress.*:ALL'
+        priv: '*.*:ALL'
         host: '%'
 
     - name: configuracion mariadb
@@ -30,6 +30,12 @@
         name: wordpress	
         state: import 
         target: /tmp/wordpress.sql
+
+    - name: restart mariadb
+      become: yes
+      service:
+        name: mariadb
+        state: restarted
 
   handlers:
     - name: restart mysql

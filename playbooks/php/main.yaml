@@ -9,6 +9,14 @@
         - php7.0-fpm
         - php-mysql
 
+    - name: reinicio nginx
+      service: name=nginx state=restarted
+      become: yes
+
+    - name: reinicio php-fpm
+      service: name=php7.0-fpm state=restarted
+      become: yes
+
   handlers:
   - name: reinicio php
     service: name=php7.0-fpm state=restarted

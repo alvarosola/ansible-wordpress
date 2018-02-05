@@ -12,8 +12,8 @@ $TTL 86400
 	86400 )	;	Negative Cache TTL
 ;
 @	IN	NS	nodo1.iesgn.org.
-
 $ORIGIN	iesgn.org.
 nodo1	IN	A	192.168.69.69
 nodo2	IN	A	192.168.69.70
-www IN CNAME nodo2
+mariadb	IN	CNAME	nodo1
+www	IN	CNAME	nodo2
