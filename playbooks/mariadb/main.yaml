@@ -2,7 +2,7 @@
 - hosts: nodo1
   become: yes
   tasks:
-    - name: Instalar mysqk
+    - name: Instalar mysql
       apt: name={{ item }} state=installed update_cache=yes
       with_items:
         - mariadb-server

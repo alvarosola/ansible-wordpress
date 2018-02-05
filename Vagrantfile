@@ -9,7 +9,6 @@ Vagrant.configure("2") do |config|
         virtualbox__intnet: "redlocal"
     nodo1.vm.network :private_network, ip: "192.168.100.1/24"
     nodo1.vm.provision "ansible" do |ansible|
-	ansible.inventory_path = "hosts"
 	ansible.playbook = "nodo1.yml"
     end
   end
@@ -20,7 +19,6 @@ Vagrant.configure("2") do |config|
 	virtualbox__intnet: "redlocal"
     nodo2.vm.network :private_network, ip: "192.168.100.2/24"
     nodo2.vm.provision "ansible" do |ansible|
-	ansible.inventory_path = "hosts"
 	ansible.playbook = "nodo2.yml"
     end
   end

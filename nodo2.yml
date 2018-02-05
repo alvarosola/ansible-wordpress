@@ -1,6 +1,4 @@
-- hosts: nodo2
+- include: playbooks/nginx/main.yaml
+- include: playbooks/php/main.yaml
+- include: playbooks/wordpress/main.yaml
 
-  roles:
-    - nginx
-    - php
-    - wordpress
