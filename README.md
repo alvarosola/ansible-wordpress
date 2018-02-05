@@ -23,21 +23,21 @@ Clonar repositorio git:
 
 - git clone https://github.com/alvarosola/ansible-wordpress
 
-Ejecutar la receta:
+Levantar escenario:
 
-- ansible-playbook main.yml
+- vagrant up --provision
 
 Pasos previos para poder ver el resultado 
 
 Necesitamos tener en nuestra configuración de red, una red 192.168.100.X/24, para que la IP este dentro del mismo rango que las IPS externas de los nodos:
 
-- ip a add 192.168.100.X/24 dev eth0
+- ip a add 192.168.69.X/24 dev eth0
 
 Modificamos el fichero /etc/resolv.conf para definir la máquina nodo1 como DNS principal:
 
 - nano /etc/resolv.conf
 
-- nameserver 192.168.100.1
+- nameserver 192.168.69.69
 
 Accedemos al navegador:
 
