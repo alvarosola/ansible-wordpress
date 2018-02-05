@@ -9,7 +9,7 @@
 
     - name: Descomprimir wordpress
       unarchive: 
-        src: templates/wordpress-4.9.2-es_ES.zip 
+        src: templates/wordpress-4.9.2.zip
         dest: /var/www/html  
         owner: www-data
         group: www-data
@@ -17,6 +17,6 @@
     - name: configuracion fichero wordpress
       template: 
         src: templates/wp-config.php 
-        dest: /var/www/html/wordpress/
+        dest: /var/www/html/wordpress/wp-config.php
         owner: www-data
         group: www-data
